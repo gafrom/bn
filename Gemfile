@@ -7,6 +7,7 @@ end
 
 gem 'rails', '~> 5.0.1'
 gem 'pg'
+gem 'annotate'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
@@ -16,6 +17,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
+gem 'httparty'
+gem 'translit'
 
 group :development, :test do
   gem 'byebug', platform: :mri

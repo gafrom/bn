@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id            :integer          not null, primary key
+#  slug          :string
+#  url           :string
+#  title         :string
+#  brand         :string
+#  vendor        :string
+#  category      :string
+#  tags          :string
+#  weight        :integer
+#  price         :integer
+#  compare_price :integer
+#  images        :string           default("{}"), is an Array
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slug: MyString
+  url: MyString
+  title: MyString
+  brand: MyString
+  vendor: MyString
+  category: MyString
+  tags: MyString
+  weight: 1
+  price: 1
+  compare_price: 1
+  images: 
+
+two:
+  slug: MyString
+  url: MyString
+  title: MyString
+  brand: MyString
+  vendor: MyString
+  category: MyString
+  tags: MyString
+  weight: 1
+  price: 1
+  compare_price: 1
+  images: 
