@@ -10,6 +10,7 @@
 #  vendor        :string
 #  category      :string
 #  tags          :string
+#  remote_id     :integer
 #  weight        :integer
 #  price         :integer
 #  compare_price :integer

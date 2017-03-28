@@ -11,20 +11,21 @@ class Parser
       title: name,
       brand: brand,
       images: images,
-      slug: 
+      category: category,
+      remote_id: id
   end
 
   private
-
-  def slug
-    Translit.convert(name, :english)
-            .downcase.gsub(/[^0-9a-z\s\-]/, '').strip.gsub(/(\s-\s|-\s|\s+)/, '-')
-  end
 
   def name
     return @name if @name
     node = @doc.css('#container #tab-description h1').first
     @name = node.content.strip
+  end
+
+  def category
+    node = @doc.css('#container #tab-description #add-options .j-kit p span').first
+    node.content.strip
   end
 
   def images
@@ -34,6 +35,16 @@ class Parser
     end
 
     @images
+  end
+
+  def price
+    node = @doc.css('#container #tab-description #cost #price meta[itemprop="price"]').first
+    node.attr('content')
+  end
+
+  def id
+    node = @doc.css('#container #tab-description #GoodCode').first
+    node.content.strip
   end
 
   def brand

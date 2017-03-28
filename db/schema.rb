@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170328195134) do
     t.string   "vendor"
     t.string   "category"
     t.string   "tags"
+    t.integer  "remote_id"
     t.integer  "weight"
     t.integer  "price"
     t.integer  "compare_price"
